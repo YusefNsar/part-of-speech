@@ -31,6 +31,19 @@ export class TestDataService {
     return randomWords;
   }
 
+  public getRank(newScore: number): number {
+    const scores = this.provider.getScoresList();
+
+    let weakerScoresCount = 0;
+    for (const score of scores) {
+      if (score < newScore) {
+        weakerScoresCount += 1;
+      }
+    }
+    const rank = (weakerScoresCount / scores.length) * 100;
+
+    return roundNearest100th(rank);
+  }
 
   // Ensure that the random words have at least one of each POS
   private validRandom(
