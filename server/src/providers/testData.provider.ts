@@ -1,4 +1,5 @@
 import { readFileSync } from 'fs';
+import path from 'path';
 import { TestData, Word } from '../types/testData';
 
 export class TestDataProvider {
@@ -16,7 +17,10 @@ export class TestDataProvider {
   }
 
   private loadTestData(): void {
-    const json = readFileSync('../../TestData.json', 'utf8');
+    const json = readFileSync(
+      path.join(__dirname, '../../TestData.json'),
+      'utf8',
+    );
 
     this.testData = JSON.parse(json);
   }

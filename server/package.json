@@ -6,8 +6,8 @@
   "scripts": {
     "start": "concurrently --kill-others -r \"npm:build\"  \"npm:watch-build\"",
     "build": "tsc -w",
-    "watch-build": "nodemon ./build/index.js",
-    "run-build": "tsc --removecomments && node ./build/index.js"
+    "watch-build": "cp TestData.json build/ && nodemon ./build/index.js",
+    "run-build": "cp TestData.json build/ && tsc --removecomments && node ./build/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
