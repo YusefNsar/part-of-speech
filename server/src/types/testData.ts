@@ -4,7 +4,7 @@ export interface TestData {
 }
 
 export interface Word {
-  id: string;
+  id: number;
   word: string;
   pos: POS;
 }
