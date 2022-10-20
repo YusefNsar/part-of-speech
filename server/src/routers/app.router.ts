@@ -24,6 +24,6 @@ const getRankHandler: Handler<{ newScore: number }, { rank: number }> = (
     rank: testDataService.getRank(req.body.newScore),
   });
 };
-appRouter.route('/rank').get(getRankHandler);
+appRouter.route('/rank').post(getRankHandler);
 
 export { appRouter };
