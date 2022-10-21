@@ -1,0 +1,55 @@
+.header {
+  font-size: 2vw;
+  width: 50vw;
+  text-align: center;
+  margin: 5vh auto 5vh auto;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000077;
+  display: none;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  font-size: 64px;
+}
+.modal.open {
+  display: grid;
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choice:nth-child(1) {
+  color: var(--pos-color-noun);
+}
+.choice:nth-child(2) {
+  color: var(--pos-color-verb);
+}
+.choice:nth-child(3) {
+  color: var(--pos-color-adjective);
+}
+.choice:nth-child(4) {
+  color: var(--pos-color-adverb);
+}
+.choice:hover {
+  color: white;
+}
+.choice:nth-child(1):hover {
+  background-color: var(--pos-color-noun);
+}
+.choice:nth-child(2):hover {
+  background-color: var(--pos-color-verb);
+}
+.choice:nth-child(3):hover {
+  background-color: var(--pos-color-adjective);
+}
+.choice:nth-child(4):hover {
+  background-color: var(--pos-color-adverb);
+}

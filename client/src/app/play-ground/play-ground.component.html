@@ -1,0 +1,13 @@
+<h6 class="header">Mark every card with it's correct POS</h6>
+
+<div class="cards-container" (click)="onCardClick()">
+  <app-card *ngFor="let card of cards; index as i" [index]="i" [card]="card" [activeCardIndex]="activeCardIndex ?? 10">
+  </app-card>
+</div>
+
+<div class="modal {{openModal ? 'open' : ''}}">
+  <div class="choice" (click)="choosePOS(POS.NOUN)">N</div>
+  <div class="choice" (click)="choosePOS(POS.VERB)">V</div>
+  <div class="choice" (click)="choosePOS(POS.ADJECTIVE)">adJ</div>
+  <div class="choice" (click)="choosePOS(POS.ADVERB)">adV</div>
+</div>
