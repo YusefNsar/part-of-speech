@@ -1,0 +1,49 @@
+.card-container {
+  width: 200px;
+  height: 300px;
+  border-radius: 8px;
+  position: absolute;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: top 1s, right 1s;
+}
+
+.card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  border: 3px gold solid;
+  transition: 1s transform, background-color 0.4s;
+}
+.card-front {
+  animation: card-rotate2 3s infinite;
+  font-family: "Sigmar One", cursive;
+  color: #fff;
+  font-size: 24px;
+  transform: rotateY(-180deg);
+  z-index: 1000;
+}
+.card-back {
+  animation: card-rotate 3s infinite;
+  outline: 10px #333;
+  font-family: "Nabla", cursive;
+  font-size: 100px;
+}
+
+.active-card {
+  z-index: 5000;
+}
+.active-card > .card-front {
+  transform: rotateY(0deg);
+}
+.active-card > .card-back {
+  transform: rotateY(180deg);
+}

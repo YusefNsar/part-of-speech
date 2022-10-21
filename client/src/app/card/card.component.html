@@ -1,0 +1,8 @@
+<div class="card-container {{active ? 'active-card' : ''}}" [style]="this.positioning">
+  <div class="card-face card-front" [style]="{backgroundColor: card.color}">
+    <p>{{ card.word }}</p>
+  </div>
+  <div class="card-face card-back" [style]="{backgroundColor: card.color}">
+    <p>{{ cardClass }}</p>
+  </div>
+</div>
