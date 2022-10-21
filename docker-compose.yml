@@ -1,0 +1,14 @@
+version: "3"
+services:
+  server:
+    build: server/
+    command: yarn start
+    ports:
+      - 3000:3000
+
+  client:
+    build: client/
+    command: ng serve
+    network_mode: host
+    depends_on:
+      - server
