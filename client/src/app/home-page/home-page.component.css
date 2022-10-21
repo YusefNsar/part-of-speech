@@ -1,0 +1,23 @@
+.title {
+  font-size: 8vw;
+  width: 80vw;
+  text-align: center;
+  margin: 15vh auto 0 auto;
+  font-family: "Cairo", sans-serif;
+  color: #e4e4e4;
+}
+.subtitle {
+  font-size: 2vw;
+  width: 50vw;
+  text-align: center;
+  margin: 0 auto 5vh auto;
+}
+
+@media screen and (max-width: 678px) {
+  .title {
+    font-size: 12vw;
+  }
+  .subtitle {
+    font-size: 4vw;
+  }
+}
