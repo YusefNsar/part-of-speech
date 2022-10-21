@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+    font-family: 'Cairo', sans-serif;
+
+    font-family: 'Jua', sans-serif;
+
+    font-family: 'Nabla', cursive;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Sigmar One', cursive;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Jua&family=Nabla&family=Roboto:ital,wght@0,300;0,400;0,700;1,700&family=Sigmar+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --pos-color-noun: #fdc259;
+  --pos-color-verb : #78cbcf;
+  --pos-color-adjective : #14748a;
+  --pos-color-adverb : #e96869;
+  --pos-color-void : #8f8f8f;
+  --pos-color-wrong : #ff3333;
+}
+
+body {
+  font-family: "Jua", sans-serif;
+  color: #b8b8c8;
+  background-color: #181819;
+  overflow: hidden;
+  /* background-color: #9C62F5; #EBFF00 #00273a #2c2c31*/
+}
