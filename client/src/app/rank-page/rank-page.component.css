@@ -1,0 +1,62 @@
+:host {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.leaderboard-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  height: 100vh;
+}
+.leaderboard {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100px;
+  height: auto;
+  border: 10px gold solid;
+  height: calc(80vh);
+}
+.leaderboard-filler {
+  width: 100%;
+  background-color: gold;
+  height: 50%;
+}
+
+.endgame-header-container {
+  text-align: center;
+}
+
+.header {
+  font-size: 2vw;
+  width: 40vw;
+  text-align: center;
+  margin: 5vh auto 5vh auto;
+}
+
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: gold;
+  color: #000;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+button:hover,
+button:focus {
+  background: rgb(218, 185, 1);
+}
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+button:active {
+  transform: scale(0.99);
+}

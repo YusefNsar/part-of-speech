@@ -1,0 +1,10 @@
+<div class="leaderboard-container">
+  <div class="leaderboard">
+    <div class="leaderboard-filler" [style.height]="rank + '%'"></div>
+  </div>
+</div>
+<div class="endgame-header-container">
+  <h6 class="header" *ngIf="rank!==undefined">You have beaten {{rank/100 | percent:'1.2-2'}} of players! {{ message }}
+  </h6>
+  <button class="try-again" (click)="onTryAgain()">Try Again</button>
+</div>
