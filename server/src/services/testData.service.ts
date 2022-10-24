@@ -18,14 +18,14 @@ export class TestDataService {
       [POS.ADVERB]: 0,
     };
 
-    let randomPostion = getRandomInteger(0, words.length - 1);
     for (const _ in Array.from(' '.repeat(10))) {
+      let randomPostion = getRandomInteger(0, words.length - 1);
       while (!this.validRandom(words, counter, randomPostion, randomWords)) {
         randomPostion = getRandomInteger(0, words.length - 1);
       }
+      
       randomWords.push(words[randomPostion]);
       counter[words[randomPostion].pos]++;
-      randomPostion = getRandomInteger(0, words.length - 1);
     }
 
     return randomWords;
